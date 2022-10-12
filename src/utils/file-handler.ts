@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-
 // refernce: https://stackoverflow.com/a/69891670
 const fullImgPath = (imgName: string): string => {
     return path.join(__dirname, '../../assets/full', `${imgName}.jpg`);

@@ -6,7 +6,7 @@ import {
     thumbImgExists,
     fullImgPath,
 } from '../../utils/file-handler';
-import validateQuery from '../../utils/input-validators';
+import validateQuery from '../../utils/input-validator';
 
 const images = express.Router();
 
@@ -45,7 +45,9 @@ images.get('/', async (req: express.Request, res: express.Response) => {
         res.sendFile(imgPath);
     } catch (error) {
         console.log('Processing Failed.');
-        res.status(500).send('Image Processing Failed.');
+        res.status(500).send(
+            'Image Processing Failed. Please try again later.'
+        );
     }
 });
 

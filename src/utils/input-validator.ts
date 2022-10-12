@@ -7,10 +7,10 @@ const validateQuery = (
     height: string
 ): string => {
     if (!filename) {
-        return 'Oops: Missing image name. Please enter the filename in the query.';
+        return 'Oops: Missing image name. Please enter the filename in the URL.';
     }
 
-    if (!fullImgExists(filepath)) return 'Input Image Does not exist.';
+    if (!fullImgExists(filepath)) return 'Uh oh: Input Image Does not exist.';
 
     if (!width && !height) return '';
 
@@ -18,10 +18,10 @@ const validateQuery = (
     const imgHeight = parseInt(height);
 
     if (isNaN(imgWidth) || isNaN(imgHeight))
-        return 'Invalid values: width and height must be numverical values.';
+        return 'Invalid values: width and height must be numerical values.';
 
     if (imgWidth <= 0 || imgHeight <= 0)
-        return 'Invalid values: width and height must be above zero.';
+        return 'Invalid values: width and height must be positive integers above zero.';
 
     return '';
 };

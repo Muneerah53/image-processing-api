@@ -14,7 +14,7 @@ const validateQuery = (
 
     if (!width && !height) return '';
 
-    const imgWidth:number  = parseInt(width);
+    const imgWidth: number = parseInt(width);
     const imgHeight: number = parseInt(height);
 
     if (isNaN(imgWidth) || isNaN(imgHeight))

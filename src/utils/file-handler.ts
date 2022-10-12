@@ -19,5 +19,4 @@ const imgExists = (path: string): boolean => {
     return fs.existsSync(path);
 };
 
-
 export { fullImgPath, thumbImgPath, imgExists };

@@ -1,4 +1,4 @@
-import { fullImgExists } from './file-handler';
+import { imgExists } from './file-handler';
 
 const validateQuery = (
     filename: string,
@@ -10,12 +10,12 @@ const validateQuery = (
         return 'Oops: Missing image name. Please enter the filename in the URL.';
     }
 
-    if (!fullImgExists(filepath)) return 'Uh oh: Input Image Does not exist.';
+    if (!imgExists(filepath)) return 'Uh oh: Input Image Does not exist.';
 
     if (!width && !height) return '';
 
-    const imgWidth = parseInt(width);
-    const imgHeight = parseInt(height);
+    const imgWidth:number  = parseInt(width);
+    const imgHeight: number = parseInt(height);
 
     if (isNaN(imgWidth) || isNaN(imgHeight))
         return 'Invalid values: width and height must be numerical values.';

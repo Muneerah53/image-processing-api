@@ -3,7 +3,7 @@ import express from 'express';
 import resize from '../../utils/image-proccesing';
 import {
     thumbImgPath,
-    thumbImgExists,
+    imgExists,
     fullImgPath,
 } from '../../utils/file-handler';
 import validateQuery from '../../utils/input-validator';
@@ -20,7 +20,7 @@ images.get(
 
             let imgPath: string = fullImgPath(fileName);
 
-            const validateMsg = validateQuery(fileName, imgPath, width, height);
+            const validateMsg: string = validateQuery(fileName, imgPath, width, height);
 
             // if error is found, send an error message
             if (validateMsg) {
@@ -29,12 +29,12 @@ images.get(
             }
 
             if (width && height) {
-                const imgWidth = parseInt(width);
-                const imgHeight = parseInt(height);
+                const imgWidth: number = parseInt(width);
+                const imgHeight: number = parseInt(height);
 
-                const thumbPath = thumbImgPath(fileName, imgWidth, imgHeight);
-                if (!thumbImgExists(thumbPath)) {
-                    const isResized = await resize(
+                const thumbPath: string = thumbImgPath(fileName, imgWidth, imgHeight);
+                if (!imgExists(thumbPath)) {
+                    const isResized: boolean = await resize(
                         imgPath,
                         imgWidth,
                         imgHeight,

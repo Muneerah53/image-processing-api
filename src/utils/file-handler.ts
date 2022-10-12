@@ -15,17 +15,9 @@ const thumbImgPath = (imgName: string, w: number, h: number): string => {
 };
 
 // refernce: https://nodejs.org/api/fs.html#fsexistssyncpath
-const fullImgExists = (path: string): boolean => {
-    if (fs.existsSync(path)) return true;
-
-    return false;
+const imgExists = (path: string): boolean => {
+    return fs.existsSync(path);
 };
 
-// is thumb img available
-const thumbImgExists = (path: string): boolean => {
-    if (fs.existsSync(path)) return true;
 
-    return false;
-};
-
-export { fullImgPath, thumbImgPath, fullImgExists, thumbImgExists };
+export { fullImgPath, thumbImgPath, imgExists };

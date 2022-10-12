@@ -1,7 +1,7 @@
 {
   "name": "image-processing-api",
   "version": "1.0.0",
-  "description": "Project developed using node, typescript, express, and jasmine",
+  "description": "Image processing api developed using node, typescript, express, and jasmine",
   "main": "index.js",
   "scripts": {
     "test": "npm run build && npm run jasmine",

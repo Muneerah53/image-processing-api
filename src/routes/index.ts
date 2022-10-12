@@ -3,11 +3,11 @@
 import express from 'express';
 import images from './api/images';
 
-const routes = express.Router();
+const routes: express.Router = express.Router();
 
 routes.use('/images', images);
 
-routes.get('/', (req: express.Request, res: express.Response) => {
+routes.get('/', (req: express.Request, res: express.Response): void => {
     // refernce: https://stackoverflow.com/questions/32601424/render-raw-html-in-response-with-express#comment115693587_44882366
 
     res.setHeader('Content-type', 'text/html');

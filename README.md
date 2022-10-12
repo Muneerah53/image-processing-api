@@ -35,7 +35,7 @@ To run prettier and lint scripts:
   - `npm run prettier`
   
   ## Notes
-  * Avaible images are found under the folder `assets/full`
-  * Resized images are saved under the folder `assets/thumb`;If deleted the images will be recreated upon succeeding API calls on the same endpoint.
-  * Only wokring with .jpg extension. 
+  * Available  images are found under the folder `assets/full`
+  * Resized images are saved under the folder `assets/thumb`; If deleted the images will be recreated upon succeeding API calls on the same endpoint.
+  * Only working with .jpg extension. 
   * Error handling is added on missing inputs, invalid inputs, and image processing failure.
